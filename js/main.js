@@ -19,13 +19,14 @@ findlocation.addEventListener("input", function (e) {
   getdata(location);
 });
 
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(function (position) {
-    var lat = position.coords.latitude;
-    var long = position.coords.longitude;
-    getdata(`${lat},${long}`);
-  });
-}
+// if (navigator.geolocation) {
+//   navigator.geolocation.getCurrentPosition(function (position) {
+//     var lat = position.coords.latitude;
+//     var long = position.coords.longitude;
+//     getdata(`${lat},${long}`);
+//   });
+// }
+getdata("cairo")
 async function getdata(location) {
   var response = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?q=${location}&days=3&key=d38d5741854848d3904151606241312`
