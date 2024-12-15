@@ -58,10 +58,5 @@ Data Display:
 
 Current weather details and forecasts are dynamically populated into the HTML using JavaScript.
 
-File Structure
 
-root
-├── index.html      # Main HTML file
-├── style.css       # CSS file for styling
-├── script.js       # JavaScript file containing the app logic
 
