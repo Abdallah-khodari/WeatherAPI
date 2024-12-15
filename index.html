@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- for icons -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!--for bootstrap  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- for normalize -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!--for main style  -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather API</title>
+  </head>
+  <body>
+    <main>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary p-4">
+        <div class="container mx-5">
+          <a
+            class="navbar-brand d-flex justify-content-center align-items-center flex-row"href="#"
+            ><img src="./imgs/logo@2x.png" alt="logo" />
+            <div
+              class="description d-flex align-items-center justify-content-center flex-column"
+            >
+              <h1>Weather</h1>
+              <span>tagline goes here</span>
+            </div>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse py-3"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5" id="navbar">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Life Camera</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Photos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section>
+        <div class="hero">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 mx-auto">
+                <div class="search position-relative">
+                  <input
+                    type="text"
+                    placeholder="Find location"
+                    class="form-control"
+                    id="findlocation"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary position-absolute"
+                  >
+                    find
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="forecasttable mb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 pt-4">
+              <div class="today">
+                <div
+                  class="cardheader d-flex justify-content-between align-content-center flex-row">
+                  <h5 id="thisdayname"></h5>
+                  <span id="thisdaynumber"></span>
+                </div>
+                
+              <div class="cardcontent text-center p-5">
+<div class="location">
+  <h5 class="fs-4" id="firstdaylocation"></h5>
+
+</div>
+<div class="degree d-flex align-items-center justify-content-center">
+  <h5><span class="fs-5" id="firstdaydegree"></span> <sup>o</sup>C</h5>
+  <img id="firstdayicon">
+</div>
+<div class="custom" id="firstdaycustom"></div>
+<div class="state">
+   <img src="./imgs\icon-umberella.png" alt="">
+
+<span id="firstdayhumidity" class="fs-5"></span>
+<img src="./imgs/icon-wind.png" alt="wind">
+<span id="firstdaywind" class="fs-5"></span>
+<img src="./imgs/icon-compass.png" alt="direction">
+<span id="firstdaydirection" class="fs-5"></span>
+</div>
+
+              </div>
+              </div>
+
+            </div>
+             <div class="col-lg-4 col-md-12 col-sm-12 pt-4">
+              <div class="forecast">
+                <div
+                  class="cardheader text-center">
+                  <h5 class="dayname"></h5>
+                </div>
+                
+              <div class="cardcontent text-center p-5">
+
+<div class="degree d-flex align-items-center justify-content-center flex-column">
+  <h5 class="daydgree fs-5"> <sup>o</sup>C</h5>
+  <img src="" alt="status icon" class="dayicon">
+</div>
+<div class="custom daycustom fs-5" ></div>
+<div class="state">
+<img src="./imgs\icon-umberella.png" alt="">
+<span class="dayhumidity fs-5"></span>
+<img src="./imgs/icon-wind.png" alt="">
+<span class="daywind fs-5"></span>
+</div>
+
+              </div>
+              </div>
+
+            </div>
+             <div class="col-lg-4 col-md-12 col-sm-12 pt-4">
+              <div class="forecast">
+                <div
+                  class="cardheader text-center">
+                  <h5 class="dayname"></h5>
+                </div>
+                
+              <div class="cardcontent text-center p-5">
+
+<div class="degree d-flex align-items-center justify-content-center flex-column">
+  <h5 class="daydgree"> <sup>o</sup>C</h5>
+  <img src="" alt="status icon" class="dayicon">
+</div>
+<div class="custom daycustom" ></div>
+<div class="state">
+<img src="./imgs\icon-umberella.png" alt="">
+<span class="dayhumidity fs-5"></span>
+<img src="./imgs/icon-wind.png" alt="">
+<span class="daywind fs-5"></span>
+</div>
+
+              </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+<footer class="site-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 position-relative">
+								<input type="text" placeholder="Enter your email to subscribe..." class="form-control subscride">
+								<input type="submit" value="Subscribe" class="btn-subscribe position-absolute" >
+						</div>
+						<div class="col-md-3">
+							<div class="social-links ms-4">
+								<a href="#" class="pe-3"><i class="fa-brands fa-facebook"></i></a>
+								<a href="#" class="pe-3"><i class="fa-brands fa-twitter"></i></a>
+								<a href="#" class="pe-3"><i class="fa-brands fa-google-plus"></i></a>
+								<a href="#" class="pe-3"><i class="fa-brands fa-pinterest"></i></a>
+							</div>
+						</div>
+            <div class="end">
+              <p>Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+					</div>
+
+					<p class="colophon">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+				</div>
+			</footer>
+    </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
